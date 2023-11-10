@@ -1,0 +1,73 @@
+Name: Jing-Wen Chen
+USC NetID: jchen885
+CS 455 PA4
+Spring 2023
+
+----------------------------------------------
+CERTIFY IT'S YOUR WORK
+
+"I certify that the work submitted for this assignment does not
+violate USC's student conduct code.  In particular, the work is my
+own, not a collaboration, and does not involve code created by other
+people, except for the the resources explicitly mentioned in the CS 455
+Course Syllabus.  And I did not share my solution or parts of it with
+other students in the course."
+
+Initial below to "sign" the above statement:
+JWC
+
+----------------------------------------------
+ACKNOWLEDGE ANY OUTSIDE SOURCES
+
+List here any code you submitted for this assignment that was written
+with significant help of a course staff member, or code used from the
+textbook.  Be specific about what methods or algorithms are involved,
+and what sections of the textbook are involved (if applicable): [you do
+not need to list any of the code that we wrote for the assignment,
+i.e., the contents of the starter files for the assignment]
+
+
+
+----------------------------------------------
+KNOWN BUGS or LIMITATIONS:
+
+
+
+----------------------------------------------
+DESCRIPTION OF YOUR CLASS DESIGN AND ALGORITHMS AND DATA STRUCTURES USED:
+In this program, I use mainly use four classes to solve the problem.
+
+1. WordFinder:
+This is the main class that builds the user interface for generating anagrams. Users can input a word of interest, and
+the program will generate all possible anagrams of the word, including its subsets. The anagrams are then sorted based
+on their score.
+
+2. AnagramDictionary:
+To create an anagrams dictionary based on a user-defined dictionary file, a hashMap can be utilized. The hashMap uses
+a sorted "String" as the key and a hashSet as the corresponding value. The hashSet contains all the words with the same
+pattern after sorting the characters in the word. This approach allows us to quickly find all the anagrams contained
+in the dictionary for any given word with just one lookup.
+
+3. Rack:
+The purpose of this class is to generate a list of words sorted by their characters to be used as keys for the
+AnagramDictionary lookup. Before generating the list, the input string is preprocessed by removing all special
+characters.
+
+4. ScoreTable:
+This class provides a static method to calculate the score of any given string using the hard-coded scoreMap, which
+is implemented as a hashMap. The scoreMap assigns a score to each character in the string, and the method computes
+the score of the entire string by adding up the individual scores of its characters.
+
+The program essentially generates a list of keys for a user-defined word and checks each key against the
+anagramDictionary to find any matching anagrams. Any anagrams found are then sorted based on their score and displayed
+in the terminal as output.
+
+----------------------------------------------
+ANY OTHER NOTES FOR THE GRADER:
+
+
+
+
+
+
+
